@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+</head>
+
+<body>
+    <div class="content">
+
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="navbar-toggle" id="js-navbar-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="main-nav" id="js-menu">
+                <li>
+                    <a href="#header" class="nav-links">Home</a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-links">About Us</a>
+                </li>
+                <li>
+                    <a href="#services" class="nav-links">Services</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-links">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="header">
+            <div class="header-text">
+                <h1>Hi, I'm <span>FaiziGfx</span></h1>
+                <p>Graphic Designer & Video Editor</p>
+            </div>
+        </div>
+
+        <section class="about">
+
+            <div id="about">
+                <div class="container">
+                    <div class="about-section">
+                        <div class="about-col-1">
+                            <img src="images/about.jpg" alt="About Us Image" class="about-image">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="subtitle">About Us</h1>
+                            <p>Hey there, I'm Faizi GFX! A versatile creative spirit with a knack for graphic design,
+                                video editing, and AI artistry. With 2 years of experience in crafting captivating
+                                graphics, 3 years honing my video editing skills, and a year exploring the realms of AI
+                                art, I bring a fusion of innovation and expertise to every project I undertake. Let's
+                                collaborate and bring your vision to life!
+                            </p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" data-tab="skills">Skills</p>
+                                <p class="tab-links" data-tab="experience">Experience</p>
+                                <p class="tab-links" data-tab="education">Education</p>
+                            </div>
+
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Graphic Design</span><br>Adobe Illustrator, Adobe Photoshop, Adobe
+                                        Lightroom.</li>
+                                    <li><span>Video Editing</span><br>Adobe After Effects, Adobe Premiere Pro.</li>
+                                    <li><span>Artificial intelligence</span><br>Midjourney, Ideogram, Dalle 2, Firefly
+                                        Runway-ML.</li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>Graphic Designer</span><br>web developer</li>
+                                    <li><span>Graphic Designer</span><br>web developer</li>
+                                    <li><span>Graphic Designer</span><br>web developer</li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>Video Editor</span><br>web developer</li>
+                                    <li><span>Video Editor</span><br>web developer</li>
+                                    <li><span>Video Editor</span><br>web developer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title">Our Services</h2>
+                <div class="service-box">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-desc">Create responsive and user-friendly websites tailored to your needs.</p>
+                </div>
+                <div class="service-box">
+                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3 class="service-title">Graphic Design</h3>
+                    <p class="service-desc">Design eye-catching logos, banners, and marketing materials for your brand.
+                    </p>
+                </div>
+                <div class="service-box">
+                    <div class="service-icon"><i class="fas fa-video"></i></div>
+                    <h3 class="service-title">Video Production</h3>
+                    <p class="service-desc">Produce engaging video content to promote your products or services.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio">
+            <div class="container">
+                <h2 class="section-title">Portfolio</h2>
+                <div class="filter-buttons">
+                    <button class="filter-button active" data-filter="all">All</button>
+                    <button class="filter-button" data-filter="logo">Logo</button>
+                    <button class="filter-button" data-filter="post">Social Media Posts</button>
+                    <button class="filter-button" data-filter="Product Branding">Product Branding</button>
+                    <button class="filter-button" data-filter="web">Web Design</button>
+                </div>
+                <div class="image-grid">
+                    <div class="image-item" data-category="logo"><a href="#"><img src="logo/1.jpg" alt="Logo 1"></a>
+                    </div>
+                    <div class="image-item" data-category="logo"><a href="#"><img src="logo/2.jpg" alt="Logo 1"></a>
+                    </div>
+                    <div class="image-item" data-category="logo"><a href="#"><img src="logo/3.jpg" alt="Logo 1"></a>
+                    </div>
+                    <div class="image-item" data-category="logo"><a href="#"><img src="logo/4.jpg" alt="Logo 1"></a>
+                    </div>
+                    <div class="image-item" data-category="logo"><a href="#"><img src="logo/5.png" alt="Logo 1"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="logo"><a href="#"><img src="logo/6.png"
+                                alt="Logo 1"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="logo"><a href="#"><img src="logo/7.jpg"
+                                alt="Logo 1"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="logo"><a href="#"><img src="logo/8.png"
+                                alt="Logo 1"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="logo"><a href="#"><img src="logo/9.jpg"
+                                alt="Logo 1"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="logo"><a href="#"><img src="logo/10.png"
+                                alt="Logo 1"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="logo"><a href="#"><img src="logo/11.jpg"
+                                alt="Logo 1"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="logo"><a href="#"><img src="logo/12.png"
+                                alt="Logo 1"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="logo"><a href="#"><img src="logo/13.png"
+                                alt="Logo 1"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="logo"><a href="#"><img src="logo/14.png"
+                                alt="Logo 1"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="logo"><a href="#"><img src="logo/15.png"
+                                alt="Logo 1"></a>
+                    </div>
+                    <!-- ----------------------------------logo----------------------------------- -->
+
+
+                    <!-- -------------------------------------posts----------------------------------------- -->
+
+                    <div class="image-item" data-category="post"><a href="#"><img src="posts/1.jpg" alt="post 1"></a>
+                    </div>
+                    <div class="image-item" data-category="post"><a href="#"><img src="posts/2.jpg" alt="post 2"></a>
+                    </div>
+                    <div class="image-item" data-category="post"><a href="#"><img src="posts/3.jpg" alt="post 3"></a>
+                    </div>
+                    <div class="image-item" data-category="post"><a href="#"><img src="posts/4.jpg" alt="post 4"></a>
+                    </div>
+                    <div class="image-item" data-category="post"><a href="#"><img src="posts/5.jpg" alt="post 1"></a>
+                    </div>
+                    <div class="image-item" data-category="post"><a href="#"><img src="posts/6.jpg" alt="post 2"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/7.jpg"
+                                alt="post 3"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/8.png"
+                                alt="post 4"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/9.png"
+                                alt="post 1"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/10.jpg"
+                                alt="post 2"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/11.png"
+                                alt="post 3"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/12.jpg"
+                                alt="post 4"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/13.png"
+                                alt="post 1"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/14.jpg"
+                                alt="post 2"></a>
+                    </div>
+                    <div class="image-item " data-category="post"><a href="#"><img src="posts/15.jpg" alt="post 3"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/16.png"
+                                alt="post 4"></a>
+                    </div>
+                    <div class="image-item " data-category="post"><a href="#"><img src="posts/17.jpg" alt="post 1"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/18.jpg"
+                                alt="post 2"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/19.png"
+                                alt="Post 3"></a></div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/20.png"
+                                alt="Post 4"></a></div>
+                    <div class="image-item " data-category="post"><a href="#"><img src="posts/21.jpg" alt="Post 1"></a>
+                    </div>
+                    <div class="image-item " data-category="post"><a href="#"><img src="posts/22.jpg" alt="Post 2"></a>
+                    </div>
+                    <div class="image-item " data-category="post"><a href="#"><img src="posts/23.jpg" alt="Post 3"></a>
+                    </div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/24.png"
+                                alt="Post 4"></a></div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/25.jpg"
+                                alt="Post 4"></a></div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/26.png"
+                                alt="Post 2"></a></div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/27.png"
+                                alt="Post 3"></a></div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/28.png"
+                                alt="Post 4"></a></div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/31.jpg"
+                                alt="Post 3"></a></div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/32.jpg"
+                                alt="Post 4"></a></div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/29.jpg"
+                                alt="Post 1"></a></div>
+                    <div class="image-item not-all" data-category="post"><a href="#"><img src="posts/30.jpg"
+                                alt="Post 2"></a></div>
+
+
+
+                    <!-- -------------------------product-------------------- -->
+                    <div class="image-item" data-category="Product Branding"><a href="#"><img src="products/1.jpg"
+                                alt="post 1"></a></div>
+                    <div class="image-item" data-category="Product Branding"><a href="#"><img src="products/2.jpg"
+                                alt="post 1"></a></div>
+                    <div class="image-item" data-category="Product Branding"><a href="#"><img src="products/3.jpg"
+                                alt="post 1"></a></div>
+                    <div class="image-item" data-category="Product Branding"><a href="#"><img src="products/4.jpg"
+                                alt="post 1"></a></div>
+                    <div class="image-item" data-category="Product Branding"><a href="#"><img src="products/5.jpg"
+                                alt="post 1"></a></div>
+                    <div class="image-item" data-category="Product Branding"><a href="#"><img src="products/6.png"
+                                alt="post 1"></a></div>
+                    <div class="image-item" data-category="Product Branding"><a href="#"><img src="products/7.png"
+                                alt="post 1"></a></div>
+                    <div class="image-item" data-category="Product Branding"><a href="#"><img src="products/8.png"
+                                alt="post 1"></a></div>
+                    <div class="image-item" data-category="Product Branding"><a href="#"><img src="products/9.jpg"
+                                alt="post 1"></a></div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Testimonials</h2>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+                            Sed
+                            cursus ante dapibus diam."</p>
+                    </div>
+                    <div class="testimonial-info">
+                        <img src="images/asad.jpg" alt="User 1">
+                        <div class="info-text">
+                            <h3>Asad Asif</h3>
+                            <p>CEO, Company XYZ</p>
+                        </div>
+                    </div>
+                    <div class="glow"></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+                            Sed
+                            cursus ante dapibus diam."</p>
+                    </div>
+                    <div class="testimonial-info">
+                        <img src="images/user1.jpg" alt="User 1">
+                        <div class="info-text">
+                            <h3>John Doe</h3>
+                            <p>CEO, Company XYZ</p>
+                        </div>
+                    </div>
+                    <div class="glow"></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+                            Sed
+                            cursus ante dapibus diam."</p>
+                    </div>
+                    <div class="testimonial-info">
+                        <img src="images/user1.jpg" alt="User 1">
+                        <div class="info-text">
+                            <h3>John Doe</h3>
+                            <p>CEO, Company XYZ</p>
+                        </div>
+                    </div>
+                    <div class="glow"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Graphic Design</a></li>
+                            <li><a href="#">Video Production</a></li>
+                            <li><a href="#">SEO Optimization</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Follow Us</h3>
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Your Company. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+// --------------------------------disable copyright-----------------------------------
+// Disable right-click context menu
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+
+
+const navbarToggle = document.querySelector('#js-navbar-toggle');
+const navbar = document.querySelector('.navbar');
+
+navbarToggle.addEventListener('click', function () {
+    navbar.classList.toggle('active');
+});
+// --------------------------------disable copyright-----------------------------------
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Tab links and contents
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            // Function to handle tab switching
+            function switchTab(tabname) {
+                for (var j = 0; j < tablinks.length; j++) {
+                    tablinks[j].classList.remove("active-link");
+                }
+                for (var k = 0; k < tabcontents.length; k++) {
+                    tabcontents[k].classList.remove("active-tab");
+                }
+                document.getElementById(tabname).classList.add("active-tab");
+                // Find the corresponding tab link and add active class
+                for (var i = 0; i < tablinks.length; i++) {
+                    if (tablinks[i].getAttribute("data-tab") === tabname) {
+                        tablinks[i].classList.add("active-link");
+                        break;
+                    }
+                }
+            }
+
+            // Click event listener for tab links
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].addEventListener("click", function () {
+                    var tabname = this.getAttribute("data-tab");
+                    switchTab(tabname);
+                });
+            }
+
+            // ---------------------------portfolio-------------------------
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const imageItems = document.querySelectorAll('.image-item');
+
+            // Hide items with 'not-all' class on page load
+            imageItems.forEach(item => {
+                if (item.classList.contains('not-all')) {
+                    item.style.display = 'none';
+                }
+            });
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+                    imageItems.forEach(item => {
+                        const itemCategory = item.getAttribute('data-category');
+                        if (filterValue === 'all') {
+                            if (!item.classList.contains('not-all')) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        } else if (itemCategory === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            imageItems.forEach(item => {
+                item.addEventListener('mouseover', () => {
+                    item.classList.add('fade-in');
+                });
+
+                item.addEventListener('mouseout', () => {
+                    item.classList.remove('fade-in');
+                });
+            });
+
+            const navbarToggle = document.getElementById('js-navbar-toggle');
+            const menu = document.getElementById('js-menu');
+
+            navbarToggle.addEventListener('click', function () {
+                menu.classList.toggle('active');
+            });
+
+            // ------------------------------scrolll-----------------------------
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+        });
+
+
+     
+    </script>
+</body>
+
+</html>

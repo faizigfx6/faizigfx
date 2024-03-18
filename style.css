@@ -1,0 +1,808 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow: hidden; /* Disable the default scroll */
+}
+
+
+
+.content {
+    height: 100vh;
+    overflow-y: scroll;
+    position: relative;
+}
+
+/* Custom Red Scroll */
+.content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: #000000;
+
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #ff0000;
+
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: #cc0000;
+}
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00000060;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Adjust z-index as needed */
+}
+
+.main-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav.active {
+    left: 0;
+}
+
+.main-nav li {
+    padding: 10px;
+}
+
+.main-nav li.logo {
+    padding: 20px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.nav-links {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-nav .nav-links.active {
+    color: rgb(255, 255, 255);
+}
+
+.nav-links::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: width 0.3s;
+}
+
+.main-nav .nav-links.active::after {
+    width: 100%;
+    background-color: red;
+}
+
+.nav-links::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff0000;
+    transition: width 0.3s;
+}
+
+.nav-links:hover::after {
+    width: 100%;
+}
+
+.navbar-toggle {
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.navbar.active .bar {
+    background-color: #ff0000; /* Change color to red when navbar is active */
+}
+
+.navbar.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.navbar.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .main-nav {
+        padding-top: 50px;
+        position: fixed;
+        top: 0; /* Adjust this to match the height of your navbar */
+        left: -100%;
+        width: 250px;
+        height: 100vh;
+        flex-direction: column;
+        z-index: 1000;
+        background-color: #000;
+        transition: left 0.3s ease;
+    }
+
+    .navbar.active .main-nav {
+        left: 0;
+    }
+
+    .main-nav li {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+
+/* Hero Section Styles */
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background fixed while the content scrolls */
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Ensure the hero image is behind the navbar */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 40%; /* Set the width to 40% for black background */
+    transform: translateY(-50%);
+    padding: 20px;
+    border-radius: 0; /* Removed border-radius */
+    text-align: center;
+    box-sizing: border-box;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.header-text p {
+    font-size: 24px; /* Increased font size for paragraph */
+    color: #fff;
+    margin-top: -20px; /* Adjusted margin between h1 and p */
+    margin-bottom: 10px; /* Adjusted margin between p and bottom */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.header-text h1 {
+    font-size: 72px; /* Increased font size for h1 */
+    color: #fff;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.header-text h1 span {
+    color: #ff0000;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .header-text {
+        width: 60%; /* Adjust width for medium devices */
+        background-color: transparent; /* Remove black background for medium devices */
+    }
+
+    .header-text h1 {
+        font-size: 56px; /* Decrease font size for h1 on medium devices */
+    }
+
+    .header-text p {
+        font-size: 20px; /* Decrease font size for paragraph on medium devices */
+        margin-top: -20px; /* Adjusted margin between h1 and p for medium devices */
+        margin-bottom: 10px; /* Adjusted margin between p and bottom for medium devices */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-text {
+        width: 100%; /* Adjust width for small devices */
+        background-color: rgba(0, 0, 0, 0.548); /* Remove black background for small devices */
+    }
+
+    .header-text h1 {
+        font-size: 52px; /* Decrease font size for h1 on extra small devices */
+    }
+
+    .header-text p {
+        font-size: 19px;
+        margin-top: -17px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header-text {
+        width: 100%; /* Adjust width for extra small devices */
+        background-color: rgba(0, 0, 0, 0.548); /* Black background for extra small devices */
+    }
+
+    .header-text h1 {
+        font-size: 45px; /* Decrease font size for h1 on extra small devices */
+    }
+
+    .header-text p {
+        font-size: 19px;
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+
+    /* Move the background image to the left on extra small devices */
+    #header {
+        background-position: -750px;
+    }
+}
+
+/* About Section Styles */
+.about {
+    padding: 80px 10px; /* Adjusted padding */
+    background-color: #000;
+    border-top: 2px solid #ff0000;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+}
+
+.about-col-1 {
+    flex: 1;
+    padding-right: 20px;
+
+}
+
+.about-col-2 {
+    flex: 2;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+/* Optional: Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .about-image {
+        margin-bottom: 0;
+    }
+}
+
+
+.container {
+    max-width: 100%;
+    margin: 0 10px; /* Adjust the margin as needed for smaller devices */
+    padding: 0 20px; /* Adjust the padding as needed */
+
+    /* Responsive Adjustments */
+    @media screen and (min-width: 576px) {
+        margin: 0 20px; /* Adjust the margin for small devices */
+    }
+
+    @media screen and (min-width: 768px) {
+        margin: 0 40px; /* Adjust the margin for medium devices */
+    }
+
+    @media screen and (min-width: 992px) {
+        margin: 0 60px; /* Adjust the margin for large devices */
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin: 0 80px; /* Adjust the margin for extra large devices */
+    }
+}
+
+
+.subtitle {
+    color: #ff0000;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tab-titles {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.tab-links {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff0000;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+/* Hide all tab contents by default */
+.tab-contents {
+    display: none;
+}
+
+/* Show the active tab content */
+.tab-contents.active-tab {
+    display: block;
+}
+
+.tab-contents ul {
+    padding-left: 20px;
+}
+
+.tab-contents ul li {
+    margin-bottom: 10px;
+}
+
+.tab-contents ul li span {
+    color: #ff0000;
+    font-size: 14px;
+}
+
+/* Services Section Styles */
+#services {
+    padding: 80px 10px; /* Adjusted padding */
+    background-color: #000;
+    border-top: 2px solid #ff0000;
+}
+
+.service-box {
+    width: calc(33.33% - 20px); /* Adjusted to 33.33% for 3 boxes in a row */
+    padding: 30px;
+    background-color: transparent;
+    border: 2px solid #ff0000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    display: inline-block; /* Added to make them inline */
+    vertical-align: top; /* Align boxes to the top */
+    margin-right: 20px; /* Added margin between boxes */
+}
+
+.service-box:last-child {
+    margin-right: 0; /* Remove margin for the last box */
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.service-desc {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+    .service-box {
+        width: calc(50% - 20px); /* Adjusted for 2 boxes in a row */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-box {
+        width: calc(100% - 0px); /* Adjusted for full width on smaller screens */
+        margin-right: 0; /* Remove margin on smaller screens */
+    }
+}
+
+/* Portfolio Section Styles */
+.portfolio {
+    padding: 80px 10px; /* Adjusted padding */
+    background-color: #000;
+    border-top: 2px solid #ff0000;
+}
+.portfolio .section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-button.active {
+    background-color: #ff0000; /* Your active button background color */
+    color: #fff; /* Your active button text color */
+    /* Any other styles for the active button */
+}
+
+.filter-button:last-child {
+    margin-right: 0;
+}
+
+.filter-button:hover {
+    background-color: #ff0000;
+}
+
+@media screen and (max-width: 576px) {
+    .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filter-button {
+        margin-bottom: 10px;
+    }
+
+    .filter-button:last-child {
+        margin-right: 10px;
+    }
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.image-item {
+    overflow: hidden;
+    border-radius: 5px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.image-item:hover {
+    transform: scale(1.05);
+    border: 2px solid #ff0000;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+    padding: 80px 10px; /* Adjusted padding */
+    background-color: #000;
+    border-top: 2px solid #ff0000;
+
+}
+.testimonials .section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+
+.testimonial-card {
+    background-color: transparent;
+    border: 2px solid #ff0000;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    perspective: 1000px;
+    position: relative;
+}
+
+
+.testimonial-content {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.testimonial-info {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-info img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 2px solid #ff0000;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.info-text h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+
+.info-text p {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Testimonials Section Styles for Small Screens (Mobile Devices) */
+@media screen and (max-width: 768px) {
+    .testimonials {
+        padding: 60px 10px; /* Adjusted padding for mobile */
+    }
+
+    .testimonials .section-title {
+        font-size: 28px; /* Decreased font size for mobile */
+        margin-bottom: 30px; /* Decreased margin for mobile */
+    }
+
+    .testimonial-card {
+        padding: 20px; /* Adjusted padding for mobile */
+        margin-bottom: 20px; /* Decreased margin for mobile */
+    }
+
+    .testimonial-content {
+        font-size: 16px; /* Decreased font size for mobile */
+        margin-bottom: 15px; /* Decreased margin for mobile */
+    }
+
+    .testimonial-info {
+        flex-direction: column;
+        align-items: center; /* Center align the items */
+    }
+
+    .testimonial-info img {
+        width: 120px; /* Decreased image width for mobile */
+        height: 120px; /* Decreased image height for mobile */
+        margin-bottom: 10px; /* Decreased margin for mobile */
+    }
+
+    .info-text h3 {
+        font-size: 20px; /* Decreased font size for mobile */
+        margin-bottom: 8px; /* Decreased margin for mobile */
+    }
+
+    .info-text p {
+        font-size: 14px; /* Decreased font size for mobile */
+        margin: 0; /* Removed margin for mobile */
+    }
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color:#000000;
+    border-top: 2px solid #ff0000;
+    color: #fff;
+    padding: 50px 10px; /* Adjusted padding */
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color:#ff0000;
+}
+
+.social-icons {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.social-icons li {
+    margin-right: 10px;
+}
+
+
+.social-icons li a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons li a:hover {
+    color: #ff0000;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header-text {
+        max-width: 100%;
+    }
+}
+
+
+.go-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff0000;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.go-to-top i {
+    font-size: 20px;
+}
